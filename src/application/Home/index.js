@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderRoutes } from "react-router-config";
-import {Top } from './style';
+import {NavLink} from 'react-router-dom';
+import {Top,Tab, TabItem } from './style';
 
 function Home (props) {
   const { route } = props;
@@ -12,6 +13,11 @@ function Home (props) {
         <span className="title">WebApp</span>
         <span className="iconfont search">&#xe62b;</span>
       </Top>
+      <Tab>
+        <NavLink to="/recommend" activeClassName="selected"><span>推荐</span><TabItem></TabItem></NavLink>
+        <NavLink to="/singers" activeClassName="selected"><span>歌手</span><TabItem></TabItem></NavLink>
+        <NavLink to="/rank" activeClassName="selected"><span>排行</span><TabItem></TabItem></NavLink>
+      </Tab>
       { renderRoutes (route.routes) }
     </div>
   )

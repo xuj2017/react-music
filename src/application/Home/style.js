@@ -18,7 +18,24 @@ export const Top = styled.div`
 `
 
 export const Tab = styled.div`
-  height:44px;
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  background: ${style["theme-color"]};
+  a {
+    padding: 2px 0;
+    font-size: 14px;
+    color: #e4e4e4;
+    &.selected {
+      span {
+        padding: 3px 0;
+        font-weight: 700;
+        color: #f1f1f1;
+        border-bottom: 2px solid #f1f1f1;
+      }
+    }
+  }
 `
 
 export const TabItem = styled.div`
